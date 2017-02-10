@@ -1,15 +1,15 @@
 require('normalize.css/normalize.css');
-require('styles/App.css');
+require('styles/App.scss');
 
 import React from 'react';
 
 var ImageFigure = React.createClass({
   render: function(){
     return (
-      <figure>
+      <figure className="img-fig">
         <img src={this.props.data.imgUrl} alt={this.props.data.title} className="img-size"/>
         <figcaption>
-          <h2>{this.props.data.title}</h2>
+          <h2 className="title-fig">{this.props.data.title}</h2>
         </figcaption>
       </figure>
     )
